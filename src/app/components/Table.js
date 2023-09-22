@@ -16,7 +16,7 @@ const Table = (props) => {
   };
 
   return (
-    <div className="border rounded shadow-md">
+    <div className="table-wrapper border rounded shadow-md">
       <DataTableExtensions
         {...tableData}
         export={false}

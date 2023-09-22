@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState } from "react";
 import { SelectInput, TextInput } from "./FormInputs";
 import FormButtons from "./Formbuttons";
@@ -6,51 +6,48 @@ import FormButtons from "./Formbuttons";
 const NewTeacherForm = () => {
   const title = [
     {
-      name: 'Mr',
-      value: 'Mr'
+      name: "Mr",
+      value: "Mr",
     },
     {
-      name: 'Mrs',
-      value: 'Mrs'
+      name: "Mrs",
+      value: "Mrs",
     },
     {
-      name: 'Miss',
-      value: 'Miss'
+      name: "Miss",
+      value: "Miss",
     },
-    
+
     {
-      name: 'Dr',
-      value: 'Dr'
+      name: "Dr",
+      value: "Dr",
     },
     {
-      name: 'Prof',
-      value: 'Prof'
+      name: "Prof",
+      value: "Prof",
     },
-  
-  ]
-  const [formData,setFormData] = useState({
+  ];
+  const [formData, setFormData] = useState({
     national_id_number: "",
-      title: "",
-      firstname: "",
-      lastname: "",
-      date_of_birth: "",
-      teacher_number: "",
-      salary: "",
-});
+    title: "",
+    firstname: "",
+    lastname: "",
+    date_of_birth: "",
+    teacher_number: "",
+    salary: "",
+  });
 
-const handleSubmit = (event) => {
-  event.preventDefault();
+  const handleSubmit = (event) => {
+    event.preventDefault();
 
-  console.log(formData);
-
- 
-};
+    console.log(formData);
+  };
 
   return (
     <form onSubmit={handleSubmit}>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-y-4 gap-x-8 w-full ">
         <div className="space-y-4">
-        <TextInput
+          <TextInput
             label="National ID Number"
             type="text"
             placeholder="National ID Number"
@@ -64,9 +61,8 @@ const handleSubmit = (event) => {
               });
             }}
             required
-            
           />
-        <SelectInput
+          <SelectInput
             label="Title"
             name="title"
             id="title"
@@ -157,9 +153,7 @@ const handleSubmit = (event) => {
           />
         </div>
 
-        <div className="space-y-4">
-          
-        </div>
+        <div className="space-y-4"></div>
 
         <div className="space-y-4"></div>
       </div>

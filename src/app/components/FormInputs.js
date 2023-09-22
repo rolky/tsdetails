@@ -8,7 +8,7 @@ export const TextInput = ({
   onChange,
   required = false,
   min,
-  max
+  max,
 }) => {
   return (
     <div>
@@ -24,9 +24,9 @@ export const TextInput = ({
           id={id}
           value={value}
           onChange={onChange}
-          required ={required}
-         min={min}
-         max={max}
+          required={required}
+          min={min}
+          max={max}
         />
       </div>
     </div>
@@ -56,14 +56,22 @@ export const TextAreaInput = ({
           id={id}
           value={value}
           onChange={onChange}
-          required ={required}
+          required={required}
         />
       </div>
     </div>
   );
 };
 
-export const SelectInput = ({ label, name, id, options, value, onChange,  required = false, }) => {
+export const SelectInput = ({
+  label,
+  name,
+  id,
+  options,
+  value,
+  onChange,
+  required = false,
+}) => {
   return (
     <div className="block space-y-1">
       {label && (
@@ -77,7 +85,7 @@ export const SelectInput = ({ label, name, id, options, value, onChange,  requir
         id={id}
         value={value}
         onChange={onChange}
-        required ={required}
+        required={required}
       >
         <option className="py-2">Select an Option</option>
         {options.map((option, index) => (
@@ -90,7 +98,15 @@ export const SelectInput = ({ label, name, id, options, value, onChange,  requir
   );
 };
 
-export const RadioInput = ({ name, id, label, value, onChange, checked,  required = false, }) => {
+export const RadioInput = ({
+  name,
+  id,
+  label,
+  value,
+  onChange,
+  checked,
+  required = false,
+}) => {
   return (
     <div className="flex items-center space-x-2">
       <input
@@ -101,7 +117,7 @@ export const RadioInput = ({ name, id, label, value, onChange, checked,  require
         value={value}
         onChange={onChange}
         checked={checked}
-        required ={required}
+        required={required}
       />
       <label htmlFor={id} className="font-medium">
         {label}

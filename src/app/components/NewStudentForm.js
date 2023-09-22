@@ -9,7 +9,7 @@ const NewStudentForm = () => {
     firstname: "",
     lastname: "",
     date_of_birth: "",
-    student_number: "",   
+    student_number: "",
   });
 
   const handleSubmit = (event) => {
@@ -37,7 +37,7 @@ const NewStudentForm = () => {
             }}
             required
           />
-          
+
           <TextInput
             label="First Name"
             type="text"
@@ -83,7 +83,7 @@ const NewStudentForm = () => {
             }}
             required
             min="2001-01-01"
-            max={new Date().toISOString().split('T')[0]}
+            max={new Date().toISOString().split("T")[0]}
           />
           <TextInput
             label="Student Number"
@@ -100,7 +100,6 @@ const NewStudentForm = () => {
             }}
             required
           />
-          
         </div>
 
         <div className="space-y-4"></div>
